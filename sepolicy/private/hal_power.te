@@ -1,3 +1,9 @@
+type hal_power_lisa, domain;
+hal_server_domain(hal_power_lisa, hal_power)
+
+type hal_power_lisa_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_power_lisa)
+
 # Allow hal_power_default to write to dt2w nodes
 allow hal_power input_device:dir search;
 allow hal_power input_device:chr_file rw_file_perms;
